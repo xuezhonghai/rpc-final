@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>rpc-final</artifactId>
+        <groupId>demo.ocean</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>rpc-server</artifactId>
+
+
+    <dependencies>
+        <!-- 公用RPC接口模块依赖 -->
+        <dependency>
+            <groupId>demo.ocean</groupId>
+            <artifactId>rpc-interface-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!-- 公用封装组件依赖 -->
+        <dependency>
+            <groupId>demo.ocean</groupId>
+            <artifactId>rpc-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!-- Netty 通讯依赖-->
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+        </dependency>
+        <!-- zookeeper客户端依赖 -->
+        <dependency>
+            <groupId>com.github.sgroschupf</groupId>
+            <artifactId>zkclient</artifactId>
+        </dependency>
+        <!-- spring boot 依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>${spring.boot.version}</version>
+        </dependency>
+        <!-- 日志组件依赖 -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>
